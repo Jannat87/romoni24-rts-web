@@ -1,35 +1,30 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
 const Slider = () => {
     return (
         <>
             <div>
-                <Carousel>
-                <Carousel.Item interval={1000}>
-                    {/* <ExampleCarouselImage text="First slide" /> */}
-                    <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={500}>
-                    {/* <ExampleCarouselImage text="Second slide" /> */}
-                    <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* <ExampleCarouselImage text="Third slide" /> */}
-                    <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                </Carousel>
+{/* <div className="swiper">
+  <div className="swiper-wrapper">
+    <div className="swiper-slide">Slide 1</div>
+    <div className="swiper-slide">Slide 2</div>
+    <div className="swiper-slide">Slide 3</div>
+    ...
+  </div>
+  <div className="swiper-pagination"></div>
+
+  <div className="swiper-button-prev"></div>
+  <div className="swiper-button-next"></div>
+
+  <div className="swiper-scrollbar"></div>
+</div> */}
+      <Swiper spaceBetween={50} slidesPerView={3}>
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+      </Swiper>
             </div>
         </>
     );
